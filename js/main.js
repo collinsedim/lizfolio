@@ -3,8 +3,7 @@ function removeMobileGrid() {
     const viewPortWidth = window.innerWidth || document.documentElement.clientWidth;
     for (let i = 0; i < colsGrid.length; i++) {
     if (viewPortWidth <= 768) {
-        colsGrid[i].classList.remove('col');
-        colsGrid[i].classList.add('bottomMargin');
+        colsGrid[i].classList.remove('col') &&colsGrid[i].classList.add('bottomMargin');
     } else {
         colsGrid[i].classList.add('col');
     }

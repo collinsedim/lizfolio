@@ -11,10 +11,13 @@ html {
 body {
     width: 100%;
 }
-
 .main__container {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.7rem;
+}
+.content__main {
+    max-width: 1200px;
+    margin: auto;
 }
 .menu {
     display: inline-flex;
@@ -23,7 +26,7 @@ body {
 }
 .menu__list {
     display: none;
-    margin: 0;
+    margin: 0 30px 0 0;
 }
 .mobile__menu > a {
     text-decoration: none;
@@ -46,15 +49,8 @@ body {
 .menu__items {
     display: inline-block;
     text-align: center;
-    margin-right: 1rem;
-}
-@media screen and (min-width:576px) {
-    /* .menu {
-        display: inline-block;
-    } */
-    /* .row {
-        display: none;
-    } */
+    margin-right: 1.5rem;
+    font-size: 2rem;
 }
 .menu__items--offCanvas {
     display: block;
@@ -73,10 +69,11 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    height: 6rem;
+    height: 8rem;
     background: var(--bg-color);
-    padding: 0 2rem;
+    padding: 0 8rem;
     align-items: center;
+    margin: 0;
 }
 .logo {
     text-transform: uppercase;
@@ -87,23 +84,22 @@ body {
     color: var(--color-secondary);
     text-transform: lowercase;
 }
-
 .hero {
-    min-height: 90vh;
-    border: 1px solid var(--bg-color-hero);
+    min-height: 80vh;
+    margin: auto;
     text-align: center;
     padding: 15rem 0;
 }
+.hero--big,
+.hero--small {
+    color: var(--color-primary);
+}
 .hero--big {
-    /* display: grid;
-    justify-content: center;
-    align-items: center; */
     font-size: 8rem;
     font-weight: 400;
 }
 .hero--small {
     font-size: 4rem;
-    color: var(--color-primary);
     margin-top: 7rem;
 }
 .name__color {
@@ -120,20 +116,21 @@ body {
 .mobile__canvas {
     display: block;
 }
-/* #carouselResize, */
 .projects {
     padding: 1rem;
 }
-/* #carouselResize {
-    background: --;
-} */
+
 .projects {
     background: var(--bg-color-hero);
 }
-@media screen and (min-width: 768px) {
-    .projects {
-        padding: 5rem;
-    }    
+#mobileGrid {
+    margin-bottom: 20px;
+}
+.projects > .aboutMeHead {
+    color: var(--color-primary);
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
 }
 .bottomMargin {
     margin-bottom: 3rem;
@@ -143,13 +140,19 @@ body {
     text-align: justify;
     padding: 4rem 0;
 }
-.aboutMeText {
-    width: 50%;
+.aboutMeText,
+#contactMe {
+    width: 80%;
     margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .projects {
+        padding: 5rem;
+    }
 }
 .aboutMeP {
     color: var(--bg-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     line-height: 1.5;
     font-size: 2rem;
 }
@@ -157,10 +160,17 @@ body {
     text-align: center;
 }
 .aboutMeIMG {
-    width: 200px;
-    border-radius: 10%;
-    float: left;
-    margin: 0 2rem 0.3rem 0;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+@media screen and (max-width: 768px) {
+    .aboutMeText {
+        width: 90%;
+    }
 }
 .aboutMeHead {
     font-size: 4rem;
@@ -170,4 +180,57 @@ body {
     text-transform: uppercase;
     color: var(--bg-color-hero);
     text-decoration: underline wavy 2px;
+}
+.contact__Me {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.inputLabel {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.input__field {
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.textarea {
+    height: 120px;
+    resize: none;
+}
+.buttons__align,
+.contact__Me > .aboutMeHead {
+    text-align: center;
+}
+.email__btn {
+    padding: 1rem 3rem;
+    border: 0;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    word-spacing: 1px;
+    background: var(--color-primary);
+    color: var(--bg-color);
+    transition: all .4s;
+}
+.email__btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+.contact__Me > .aboutMeHead {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.inputGroup {
+    margin-bottom: 10px;
+}
+.footer__bg {
+    min-height: 50px;
+    background: var(--color-primary);
+    text-align: center;
+    color: var(--bg-color);
+    padding: 1.5rem 0 0 0;
 }
