@@ -51,7 +51,9 @@ body {
 @media screen and (min-width:576px) {
     /* .menu {
         display: inline-block;
-        margin-top: 5rem;
+    } */
+    /* .row {
+        display: none;
     } */
 }
 .menu__items--offCanvas {
@@ -87,22 +89,22 @@ body {
 }
 
 .hero {
-    height: 90vh;
+    min-height: 90vh;
     border: 1px solid var(--bg-color-hero);
     text-align: center;
-    padding: 10rem;
+    padding: 15rem 0;
 }
 .hero--big {
-    display: grid;
+    /* display: grid;
     justify-content: center;
-    align-items: center;
-    font-size: 10rem;
+    align-items: center; */
+    font-size: 8rem;
     font-weight: 400;
 }
 .hero--small {
     font-size: 4rem;
     color: var(--color-primary);
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 .name__color {
     color: var(--color-secondary);
@@ -118,24 +120,54 @@ body {
 .mobile__canvas {
     display: block;
 }
-#carouselResize,
-.projects,
-.after__projects {
-    padding: 5rem;
+/* #carouselResize, */
+.projects {
+    padding: 1rem;
 }
-#carouselResize {
+/* #carouselResize {
     background: --;
-}
+} */
 .projects {
     background: var(--bg-color-hero);
+}
+@media screen and (min-width: 768px) {
+    .projects {
+        padding: 5rem;
+    }    
+}
+.bottomMargin {
+    margin-bottom: 3rem;
 }
 .after__projects {
     background: var(--color-primary);
     text-align: justify;
+    padding: 4rem 0;
+}
+.aboutMeText {
+    width: 50%;
+    margin: 0 auto;
+}
+.aboutMeP {
+    color: var(--bg-color);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 2rem;
 }
 #ap__head {
     text-align: center;
 }
-.aboutMeText {
-    color: var(--bg-color);
+.aboutMeIMG {
+    width: 200px;
+    border-radius: 10%;
+    float: left;
+    margin: 0 2rem 0.3rem 0;
+}
+.aboutMeHead {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bg-color-hero);
+    text-decoration: underline wavy 2px;
 }
