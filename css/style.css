@@ -71,7 +71,7 @@ body {
     justify-content: space-between;
     height: 8rem;
     background: var(--bg-color);
-    padding: 0 8rem;
+    padding: 0 5rem;
     align-items: center;
     margin: 0;
 }
@@ -86,19 +86,22 @@ body {
 }
 .hero {
     min-height: 80vh;
-    margin: auto;
+    /* margin: auto; */
     text-align: center;
     padding: 15rem 0;
+    box-shadow: 0 0 0 2px rgb(221, 221, 221);
+    border-radius: 5px;
+    border: 0;
 }
-.hero--big,
+.hero-text-big,
 .hero--small {
     color: var(--color-primary);
 }
-.hero--big {
+.hero-text-big {
     font-size: 8rem;
     font-weight: 400;
 }
-.hero--small {
+.hero-text-small {
     font-size: 4rem;
     margin-top: 7rem;
 }
@@ -216,9 +219,13 @@ body {
     color: var(--bg-color);
     transition: all .4s;
 }
+.email__btn:last-of-type {
+    opacity: .91;
+}
 .email__btn:hover {
     background: var(--color-secondary);
     color: var(--color-primary);
+    transform: scale(1.05);
 }
 .contact__Me > .aboutMeHead {
     color: var(--color-primary);
@@ -233,4 +240,12 @@ body {
     text-align: center;
     color: var(--bg-color);
     padding: 1.5rem 0 0 0;
+}
+.footer__text > a {
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: color .4s;
+}
+.footer__text > a:hover {
+    color: var(--color-secondary);
 }
